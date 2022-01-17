@@ -28,7 +28,7 @@ public class Singer {
 
     @NotEmpty(message="{validation.firstname.NotEmpty.message}")
     @Size(min=3, max=60, message="{validation.firstname.Size.message}")
-    @Column(name = "FIST_NAME")
+    @Column(name = "FIRST_NAME")
     private String firstName;
 
     @NotEmpty(message="{validation.lastname.NotEmpty.message}")
@@ -42,9 +42,4 @@ public class Singer {
 
     @Column(name = "DESCRIPTION")
     private String description;
-
-    @Basic(fetch = FetchType.LAZY)
-    @Lob
-    @Column(name = "PHOTO")
-    private byte photo;
 }

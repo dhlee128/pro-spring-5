@@ -49,10 +49,9 @@ public class SingerController {
         return "update";
     }
 
-    @PostMapping
+    @PostMapping(value = "/save")
     public String saveSinger(@Valid Singer singer){
         singerService.save(singer);
         return "redirect:/singers/"+singer.getId();
     }
-
 }
